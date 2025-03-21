@@ -4,11 +4,11 @@
     "slug": "frontend",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/food-cover.jpg",
+    "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "newArchEnabled": false,
+    "newArchEnabled": true,
     "splash": {
-      "image": "./assets/splash-food-cover.jpg",
+      "image": "./assets/icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -22,23 +22,28 @@
           },
           {
             "SKAdNetworkIdentifier": "n38lu8286q.skadnetwork"
+          },
+          {
+            "SKAdNetworkIdentifier": "v9wttpbfk9.skadnetwork"
+          },
+          {
+            "SKAdNetworkIdentifier": "n38lu8286q.skadnetwork"
           }
-        ]
-      }
+        ],
+        "ITSAppUsesNonExemptEncryption": false
+      },
+      "bundleIdentifier": "com.neeleshks.frontend"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-food-cover.jpg",
+        "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#ffffff"
       },
       "package": "com.neeleshks.frontend"
     },
     "web": {
-      "favicon": "./assets/favfood-cover.jpg"
+      "favicon": "./assets/icon.png"
     },
-    "plugins": [
-      "expo-facebook"
-    ],
     "extra": {
       "eas": {
         "projectId": "83e36221-8ed4-4cdd-a39e-75670f34641c"

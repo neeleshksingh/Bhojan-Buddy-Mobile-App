@@ -6,7 +6,6 @@ import { Ionicons } from '@expo/vector-icons';
 import { useDispatch } from 'react-redux';
 import { login } from '../redux/authSlice';
 import { NavigationProp } from '../types/navigation';
-import * as Facebook from 'expo-facebook';
 import { LinearGradient } from 'expo-linear-gradient';
 
 interface Props {
@@ -25,18 +24,9 @@ const LoginScreen: React.FC<Props> = ({ navigation }) => {
   };
 
   const handleFacebookLogin = async () => {
-    try {
-      await Facebook.initializeAsync({ appId: 'YOUR_FB_APP_ID' });
-      const { type } = await Facebook.logInWithReadPermissionsAsync({
-        permissions: ['public_profile', 'email'],
-      });
-      if (type === 'success') {
-        dispatch(login('facebook_user'));
-        navigation.navigate('Landing');
-      }
-    } catch (error) {
-      console.error('Facebook Login Error:', error);
-    }
+    console.log('Dummy Google login triggered');
+    dispatch(login('dummy_google_user'));
+    navigation.navigate('Landing');
   };
 
   const handleGoogleLogin = () => {
