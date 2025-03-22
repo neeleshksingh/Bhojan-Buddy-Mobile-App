@@ -13,6 +13,7 @@ import { RootStackParamList } from '../types/navigation';
 import { Ionicons } from '@expo/vector-icons';
 import { View, Text, StyleSheet, TouchableOpacity, StatusBar } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import LandingScreenWithNotification from '../components/LandingScreen';
 
 const Stack = createStackNavigator<RootStackParamList>();
 const Tab = createBottomTabNavigator();
@@ -50,7 +51,7 @@ const HomeTabs = () => (
         tabBarStyle: styles.tabBar,
       })}
     >
-      <Tab.Screen name="Home" component={LandingScreen} options={{ headerShown: false }} />
+      <Tab.Screen name="Home" component={LandingScreenWithNotification} options={{ headerShown: false }} />
       <Tab.Screen name="Cart" component={CartScreen} options={{ headerShown: false }} />
       <Tab.Screen name="Orders" component={OrderScreen} options={{ headerShown: false }} />
     </Tab.Navigator>
